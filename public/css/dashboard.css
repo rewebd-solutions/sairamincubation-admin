@@ -1,0 +1,318 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    /* padding: 4px; */
+}
+
+body {
+    --gap: 10px;
+    --space: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1vw, 1vw + 1rem, .95rem);
+    font-weight: 600;
+    scroll-behavior: smooth;
+}
+
+.nav-main {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 3%;
+    background: #fff;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 100%;
+    /* transform: translateY(100px); */
+}
+
+.nav-main-hide{
+    transform: translateY(-100px);
+}
+
+.incubator-logo {
+    /* display: inline-block; */
+    width: 10%;
+}
+
+.nav-btns {
+    display: flex;
+    /* justify-content: center; */
+    gap: 20px;
+    align-items: center;
+    width: fit-content;
+    /* outline: 1px solid red; */
+    padding: 5px;
+    position: relative;
+}
+
+.nav-btns>a {
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+    position: relative;
+    transition: transform 0.25s linear, opacity 0.25s ease;
+    /* outline: 1px solid red; */
+}
+
+.nav-btns:hover a:not(:hover){
+    opacity: 0.5;
+}
+
+.nav-btns>a:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(10px);
+    height: 2px;
+    top: -3px;
+    left: 0;
+    background-color: rgba(67, 137, 250, 255);
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.nav-link:hover::before {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(-10px);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: rgba(67, 137, 250, 255);
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.nav-link:hover::after {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+}
+
+.hamburger{
+    display: none;
+    /* outline: 1px solid red; */
+}
+
+.x{
+    transform: rotate(46deg) translateY(7px);
+}
+
+.y{
+    transform: rotate(-46deg) translateY(-7px);
+}
+
+.x-fade{
+    opacity: 0;
+}
+
+.nav-comp{
+    width:100%; 
+    height:11vh;
+}
+
+.nav-main-mobile{
+    display: none;
+}
+
+h1{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #4389fa;
+    text-decoration-thickness: 3px;
+}
+
+/*Reference - SSM Code starts here*/
+
+
+.admin-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 10%;
+    text-align: justify;
+    gap: 15%;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+    box-shadow: inset 0px 0px 15px #ADCCE9;
+    position: relative;
+    overflow: hidden;
+}
+
+.incubation-main {
+    width: 40%;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.data p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: clamp(3rem, 2.4286rem + 0.8929vw, 3.5rem);
+    font-weight: 700;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+.data label {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: larger;
+    font-weight: 700;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+.underline{
+    display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.underline::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: #4389fa;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+input::file-selector-button{
+    border: none;
+    padding: 2.5% 2.5% 2.5% 2.5%;
+    background-color: rgba(67, 137, 250, 255);
+    color: #ebebeb;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    transition: box-shadow 0.25s ease;
+    border-radius: 3px;
+}
+
+input[type=text]{
+    width: auto;
+    height: 2rem;
+}
+
+.admin-upload button{
+    border: none;
+    padding: 2% 2% 2% 2%;
+    background-color: rgba(67, 137, 250, 255);
+    color: #ebebeb;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    transition: box-shadow 0.25s ease;
+    border-radius: 3px;
+}
+
+.underline-admin {
+    border: none;
+    height: 8px;
+    background-color: rgba(67, 137, 250, 255);
+    width: 50%;
+    border-radius: 3px;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+
+@media screen and (max-width: 800px) {
+    .nav-main .nav-btns{
+        display: none;
+        justify-content: space-evenly;
+    }
+
+    .incubator-logo{
+        width: 40%
+    }
+
+    .nav-main-mobile{
+        display: flex;
+        position: fixed;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        right:0;
+        top:0;
+        width: 60vw;
+        height: 100vh;
+        z-index: 998;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-main-mobile .nav-btns{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        font-size: 14px
+    }
+
+    .nav-main-hide-mobile{
+        transform: translateX(100%);
+    }
+
+    .contact-btn{
+        padding: 10px 15px;
+    }
+
+    .hamburger{
+        display: flex;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        gap: 3px;
+    }
+        
+    .hamburger span{
+        width: 15px;
+        height: 2px;
+        background-color: #000;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        transform-origin: center;
+    }
+
+    .nav-comp{
+        height: 3.8em;
+    }
+
+}

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script> -->
+    <title>Admin - Sairam Techno Incubator</title>
+    <link rel="stylesheet" href="static/css/dashboard.css" type="text/css">
+</head>
+<body>
+
+    <nav class="nav-main">
+        <img class="incubator-logo" src="static/img/logo.png" alt="Sairam Techno Incubator">
+        <h1>ADMIN</h1>
+        <div class="nav-btns">
+            <div class="nav-slider"></div>
+            <a class="nav-link" href="#home">HOME</a>
+            <a class="nav-link" href="#footer">CONTACT</a>
+        </div>
+        <button class="hamburger" onclick="menuToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <nav class="nav-main-mobile nav-main-hide-mobile">
+        <div class="nav-btns">
+            <a class="nav-link" href="#home">HOME</a>
+            <a class="nav-link" href="#footer">CONTACT</a>
+        </div>
+    </nav>
+    
+    <!--Reference - SSM Code Starts here-->
+    <section id="" class="admin-page">
+        <div class="data">
+            <br>
+            <br>
+            <p class="underline">ADD TO GALLERY</p>
+            <hr class="underline-admin">
+            <form class="gallery-upload" action="/gallery-upload" method="post">
+                <label>Gallery image:   </label>
+                <input type="file" accept="image/png, image/jpeg, image/jpe, image/jpg" name="fileupload" id="gal-img-file">
+                <br>
+                <br>
+                <label>Descriptio (Max 8 words):</label>
+                <br>
+                <input type="text" placeholder="Image Description">
+                <br>
+                <br>
+                <button id="gallery-submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="static/index.js"></script>
+</body>
+</html>
